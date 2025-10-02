@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita</title>
-</head>
-<body>
-    <h1>Halaman Berita</h1>
-</body>
-</html>
+@extends('layouts/main')
+
+@section('content')
+  <h1>Berita Hari Ini</h1>
+
+  @foreach($beritas as $berita)
+  <article class="mt-5">
+    <h2>{{$berita ['judul']}}</h2>
+    <h3>{{$berita ['penulis']}}</h3>
+    <p>{{$berita ['konten']}}</p>
+</article>
+  @endforeach
+
+@endsection

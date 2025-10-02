@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil</title>
-</head>
-<body>
-    <h1>Profil Web</h1>
-</body>
-</html>
+@extends('layouts/main')
+
+@section('content')
+  <h1>Profil</h1>
+  <h3>{{ $nama }}</h3>
+  <p>{{ $nohp }}</p>
+  <img src= "{{$foto}}" width= "200px" />
+
+@endsection
