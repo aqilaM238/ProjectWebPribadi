@@ -5,7 +5,9 @@
 
   @foreach($beritas as $berita)
   <article class="mt-5">
-    <h2>{{$berita ['judul']}}</h2>
+    <a href="/berita/{{ $berita['slug']}}">
+       <h2>{{$berita ['judul']}}</h2>
+    </a>
     <h3>{{$berita ['penulis']}}</h3>
     <p>{{$berita ['konten']}}</p>
 </article>
