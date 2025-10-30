@@ -4,7 +4,16 @@
 <h1 class="text-center">Data Mahasiswa</h1>
   <div class="row mt-4">
 
+  <a href="/tambahmahasiswa">
+
   <button type="button" class="btn btn-success mb-2">Tambah Data</button><br>
+  </a>
+  @if ($message = Session::get('success'))
+    <div class="alert alert-success" role="alert">
+      {{ $message }}
+    </div>
+  @endif
+
 
   <table class="table">
   <thead>
